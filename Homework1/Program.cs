@@ -15,8 +15,9 @@ else
     Console.WriteLine("Max = " + numberB);
 }
 
-*/
+
 //Задача 2: Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
+
 
 Console.Write("Input integer number 1: ");
 int numberA = Convert.ToInt32(Console.ReadLine());
@@ -32,3 +33,20 @@ if(numberC > max) max = numberC;
 {
     Console.WriteLine("Max = " + max);
 }
+
+Задача 3: Напишите программу, которая на вход принимает число и выдаёт,
+является ли число чётным (делится ли оно на два без остатка).
+
+Console.Write("Input integer number: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+if(number % 2 == 0)
+{
+    Console.WriteLine("Число четное");
+}
+else
+{
+    Console.WriteLine("Число нечетное");
+}
+*/
+

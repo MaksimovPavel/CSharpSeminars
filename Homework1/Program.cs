@@ -48,5 +48,30 @@ else
 {
     Console.WriteLine("Число нечетное");
 }
-*/
 
+
+Задача 4: Напишите программу, которая на вход принимает число (N),
+а на выходе показывает все чётные числа от 1 до N.
+
+Console.Write("Input integer number: ");
+int num = Convert.ToInt32(Console.ReadLine());
+if (num <= 1 )
+{
+    Console.WriteLine("Введено некорректное число");    
+}
+int current = 1;
+
+while(current <= num)
+{
+    if (current % 2 ==0)
+    {
+    Console.Write(current + " ");
+    current++;
+    }
+    else 
+    {
+        current++;
+    }
+}
+
+*/

@@ -23,7 +23,7 @@ polindrom(num);
 
 //Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 
-double Sqrt(int x1, int y1, int z1, int x2, int y2, int z2)
+double DotDistance(int x1, int y1, int z1, int x2, int y2, int z2)
 {
     return Math.Sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1) + (z2-z1)*(z2-z1));
 }
@@ -43,5 +43,26 @@ Console.WriteLine("Введите координату z второй точки
 int z2 = Convert.ToInt32(Console.ReadLine());
 
 Console.Write("Расстояние между точками = " + Sqrt(x1,y1,z1,x2,y2,z2));
-*/
 
+
+//Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N
+
+void CubNumber(int N)
+{
+    int count = 1;
+    Console.Write(N + "-> ");
+    while (count <= N)
+    {
+        Console.Write(count*count*count + " ");
+        count++;
+    }
+}
+
+Console.WriteLine("Введите число N: ");
+int num = Convert.ToInt32(Console.ReadLine());
+if(num >0)
+    CubNumber(num);
+else
+    Console.Write("Введите положительное число!");
+
+*/

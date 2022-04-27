@@ -9,7 +9,7 @@ void ShowNumber (int num)
     Console.Write(secondNum);
     
 }
-int num = new Random().Next(100, 999);
+int num = new Random().Next(100, 1000);
 ShowNumber(num);
 
 

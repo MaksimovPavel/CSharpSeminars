@@ -78,33 +78,27 @@ SumOfOddElements(myArray);
 
 */
 //Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
-double[,] array = new double[1, 10]; // [1 - количество строк в массиве, 10 - количество элементов массива]
+double[] array = new double[10]; // [10 - количество элементов массива]
 
 Random random = new Random();
-for (int i = 0; i < 1; i++)
-{
-    for (int j = 0; j < 10; j++)
+for (int i = 0; i < 10; i++)
     {
-        array[i, j] = random.NextDouble() * 100; // NextDouble() дает случайное вещественное число в диапазоне от 0 до 1
-        Console.Write("{0,6:F2}", array[i, j]);
+        array[i] = random.NextDouble() * 100; // NextDouble() дает случайное вещественное число в диапазоне от 0 до 1
+        Console.Write("{0,6:F2}", array[i]);
     }
     Console.WriteLine();
-}
-void FindDifOfMaxMin(double[,] array) 
+void FindDifOfMaxMin(double[] array) 
 {
-    double max = array[0,0];
-    double min = array[0,0];
+    double max = array[0];
+    double min = array[0];
     double sum = 0;
-    for (int i = 0; i < 1; i++)
+    for (int i = 0; i < 10; i++)
     {
-        for (int j = 0; j < 10; j++)
-        {
-            if(array[i,j] > max)
-                max = array[i,j];
-            else if(array[i,j] < min)
-                min = array[i,j];
+        if(array[i] > max)
+            max = array[i];
+        else if(array[i] < min)
+            min = array[i];
             sum = max - min;
-        }
     }
     Console.WriteLine("Max = {0,4:F2}",max);
     Console.WriteLine("Min = {0,4:F2}",min);

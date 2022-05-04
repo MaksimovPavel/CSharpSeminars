@@ -30,20 +30,6 @@ FindPosElements(array);
 
 //Напишите программу, которая будет преобразовывать десятичное число в двоичное.
 
-Console.Write("Input number: ");
-int number = Convert.ToInt32(Console.ReadLine());
-
-int num = number;
-string s = "";
-while (num > 0)
-{
-s = ((num % 2 == 0) ? "0" : "1") + s;
-num /= 2;
-}
-Console.Write("Number in 2 system is:" +s);
-Console.ReadKey();
-
-
 Console.Write("Input number to convert - ");
 int number = Convert.ToInt32(Console.ReadLine());
 

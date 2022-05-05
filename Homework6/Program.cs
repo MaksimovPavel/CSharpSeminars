@@ -29,49 +29,6 @@ int[]array = CreateArray(size);
 FindPosElements(array);
 
 //Напишите программу, которая будет преобразовывать десятичное число в двоичное.
-
-Console.Write("Input number to convert - ");
-int number = Convert.ToInt32(Console.ReadLine());
-
-int[] array = new int [10];
-int result = 0;
-int num = number;
-while(num > 0)
-{
-    for(int i = 0; i < 10; i++)
-    {
-        result = num % 2;
-        num /= 2;
-        array[i] = result;
-    }
-} 
-
-void ShowArray(int[] array)
-{
-    for(int i = 0; i < array.Length; i++)
-        Console.Write(array[i] + " ");
-    Console.WriteLine();
-}
-int[] ReverseArray(int[] array) // 1 -4 3 -2 6 -1 5 3 8 -5
-{
-    int newSize = array.Length;
-    int[] newArray = new int[newSize];
-
-    for (int i = 0, j = array.Length - 1; i < newSize; i++,j--)
-    {
-        newArray[i] = array[j];
-    }
-    return newArray;
-}
-
-int[] newArr = ReverseArray(array);
-ShowArray(array);
-ReverseArray(array);
-Console.Write("result is: " );
-ShowArray(newArr);
-*/
-
-//Напишите программу, которая будет преобразовывать десятичное число в двоичное.
 string Calculator(int num, string binary)
 {
     if(num<=1)

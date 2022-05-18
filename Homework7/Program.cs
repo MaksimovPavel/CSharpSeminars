@@ -62,7 +62,7 @@ for(int i = 0; i < matrix.GetLength(0); i++)
     Console.WriteLine();
 }
 FindElementInArray(matrix);
-*/
+
 
 void FindElementInArray (int [,] array)
 {
@@ -101,4 +101,40 @@ for(int i = 0; i < matrix.GetLength(0); i++)
 }
 FindElementInArray(matrix);
 
+*/
+//Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
 
+void FindArithMean (int [,]array)
+{   
+    double [] sum = new double [array.Length];
+    for (int i=0; i<array.GetLength(0); i++)
+    {
+        for(int j=0; j<array.GetLength(1); j++)
+        {
+            sum[i] += array[j, i];
+        }
+    }
+    Console.WriteLine("Arithmetic mean of each column is: ");
+    for (int i=0; i<array.GetLength(0); i++)
+    {
+        double arithMean = sum[i] / array.GetLength(1);
+        Console.Write(arithMean + " ");
+    }
+}
+
+Console.Write("Input number of strings: ");
+int str = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input number of rows: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+
+int [,] matrix = new int [str,rows];
+for(int i = 0; i < matrix.GetLength(0); i++)
+{
+    for (int j = 0; j < matrix.GetLength(1); j++)
+    {
+        matrix [i,j] = new Random().Next(0,10);
+        Console.Write(matrix[i,j] + " ");
+    }
+    Console.WriteLine();
+}
+FindArithMean(matrix);

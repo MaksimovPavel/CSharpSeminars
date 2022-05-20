@@ -43,7 +43,7 @@ int [,] ReplaceArrayElements (int [,] arr)
                         arr[i,j+1] = temp;
                     }
                 }
-                https://ru.stackoverflow.com/questions/989870/Сортировка-строк-двумерного-массива-по-возрастанию
+
         }
     }
     return arr;

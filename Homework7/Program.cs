@@ -27,43 +27,6 @@ else CreateRandomArray(m,n);
 //Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, 
 // и возвращает значение этого элемента или же указание, что такого элемента нет.
 
-void FindElementInArray(int [,] array)
-{
-    Console.Write("Input element horizontal position: ");
-    int x = Convert.ToInt32(Console.ReadLine())-1;
-    Console.Write("Input element vertical position: ");
-    int y = Convert.ToInt32(Console.ReadLine())-1;
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (x < 0 | x > array.GetLength(0) - 1 | y < 0 | y > array.GetLength(1) - 1)
-                {
-                    Console.WriteLine("Элемент не существует");
-                }
-            else
-            {
-                Console.WriteLine("Значение элемента массива = {0}", array[x, y]);
-            }
-            Console.ReadLine();  
-            
-        }
-              
-    }
-}
-int [,] matrix = new int [10,10];
-for(int i = 0; i < matrix.GetLength(0); i++)
-{
-    for (int j = 0; j<matrix.GetLength(1); j++)
-    {
-        matrix [i,j] = new Random().Next(0,10);
-        Console.Write(matrix[i,j] + " ");
-    }
-    Console.WriteLine();
-}
-FindElementInArray(matrix);
-
-
 void FindElementInArray (int [,] array)
 {
     Console.Write("Input element horizontal position: ");
@@ -83,12 +46,10 @@ void FindElementInArray (int [,] array)
         }   
     }
 }
-
 Console.Write("Input number of strings: ");
 int str = Convert.ToInt32(Console.ReadLine());
 Console.Write("Input number of rows: ");
 int rows = Convert.ToInt32(Console.ReadLine());
-
 int [,] matrix = new int [str,rows];
 for(int i = 0; i < matrix.GetLength(0); i++)
 {
@@ -100,6 +61,7 @@ for(int i = 0; i < matrix.GetLength(0); i++)
     Console.WriteLine();
 }
 FindElementInArray(matrix);
+
 
 */
 //Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
